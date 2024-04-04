@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mood-toggel</title>
+</head>
+<style>
+    body{
+ background: rgb(42,3,77);
+background: linear-gradient(90deg, rgba(42,3,77,1) 0%, rgba(28,109,127,1) 39%, rgba(0,255,248,1) 100%);
+    }
+    .title{
+        text-align: center;
+        color: white;
+    }
+    .container{
+        background-color: azure;
+        width: 250px;
+        height: 250px;
+        margin: 10px  auto;
+        justify-content: center;
+        padding: 5px;
+        border-radius: 10px;
+
+    }
+    .btn-contain{
+        display: flex;
+            justify-content: center;
+            margin-top: 20px;
+    }
+    .btn{
+           margin: 10px;
+           width: 60px;
+            height: 40px;
+            padding: 5px;
+            border-radius: 20px;
+            font-size: 15px;
+            cursor: pointer;}
+    
+    .btn-4{
+        width:80px ;
+    }
+   
+ .same-theme{
+    background-image: linear-gradient(to right bottom, #370532, #64003e, #94003e, #be0030, #df0d0d);        color: white;
+    }
+</style>
+<body>
+    <h1 class="title"> Kim Teahyange mood swing...</h1>
+    <div class="container">
+ <img src="../mood-toggle/pic/v sad.jpg" height="250px" width="250px" id="v"/>
+</div>
+<div class="btn-contain">
+    <button class="btn-1 btn same-theme" onclick="toggle('sad')">sad</button>
+    <button class="btn-2 btn same-theme" onclick="toggle('happy')">happy</button>
+    <button class="btn-3 btn same-theme" onclick="toggle('cute')">cute</button>
+    <button class="btn-4 btn same-theme" onclick="toggle('modeling')">modeling</button>
+    <button class="btn-5 btn same-theme" onclick="toggle('anime')">anime</button>
+</div>
+<script>
+    function toggle(state)
+    {
+      const vElement = document.getElementById('v');
+      if(state=='sad')
+      {
+        vElement.src = '../mood-toggle/pic/v sad.jpg';
+
+      }
+     else if (state=='happy')
+      {
+        vElement.src = '../mood-toggle/pic/happy v.jpg';
+      }
+      else if (state=='cute')
+      {
+        vElement.src = '../mood-toggle/pic/cute v.jpg';
+      }
+      else if (state=='modeling')
+      {
+        vElement.src = '../mood-toggle/pic/v modeling.jpg';
+      }
+    else{
+    vElement.src = '../mood-toggle/pic/v aninme.jpg';
+    }
+}
+</script>
+</body>
+</html>
